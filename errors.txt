@@ -1,0 +1,3 @@
+﻿src/components/sections/EducationAchievements.tsx(5,76): error TS2305: Module '"lucide-react"' has no exported member 'Github'.
+src/components/sections/EducationAchievements.tsx(5,84): error TS2305: Module '"lucide-react"' has no exported member 'Linkedin'.
+src/components/sections/Projects.tsx(4,32): error TS2305: Module '"lucide-react"' has no exported member 'Github'.
