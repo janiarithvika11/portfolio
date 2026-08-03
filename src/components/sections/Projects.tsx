@@ -67,7 +67,7 @@ export default function Projects() {
             ],
             tech: ["Java", "Spring Boot", "React", "MongoDB", "JWT", "Tailwind CSS"],
             demoUrl: "#contact",
-            githubUrl: "#contact",
+            githubUrl: "https://github.com/janiarithvika11/Enterprise_workflow",
         },
         {
             id: "phishing-detector",
@@ -89,7 +89,7 @@ export default function Projects() {
             ],
             tech: ["Python", "Scikit Learn", "NLP", "Gmail API", "Chrome API", "React"],
             demoUrl: "#contact",
-            githubUrl: "#contact",
+            githubUrl: "https://github.com/janiarithvika11/spam_email_classification",
         },
     ];
 
