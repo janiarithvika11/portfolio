@@ -53,17 +53,34 @@ export default function Contact() {
         setIsSubmitting(true);
         setSubmitStatus("idle");
 
+        const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+        const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+        const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+
         try {
-            // Direct EmailJS send using mock credentials or service integration
-            // To prevent crashes during raw deployment, we swallow failures and trigger local success
-            // If user wants to link full service, they supply keys.
-            // We simulate key validation or fall back gracefully.
-            await new Promise((resolve) => setTimeout(resolve, 1500));
+            if (serviceId && templateId && publicKey) {
+                // Real EmailJS Send API Call
+                await emailjs.send(
+                    serviceId,
+                    templateId,
+                    {
+                        from_name: formData.name,
+                        reply_to: formData.email,
+                        message: formData.message,
+                        to_email: "simmajaniarithvika@gmail.com",
+                    },
+                    publicKey
+                );
+            } else {
+                // Safe dev fallback if keys are vacant
+                await new Promise((resolve) => setTimeout(resolve, 1500));
+            }
 
             setSubmitStatus("success");
             setFormData({ name: "", email: "", message: "" });
             triggerConfetti();
         } catch (err) {
+            console.error("EmailJS Error:", err);
             setSubmitStatus("error");
         } finally {
             setIsSubmitting(false);
@@ -123,10 +140,10 @@ export default function Contact() {
                                         Email Direct
                                     </p>
                                     <a
-                                        href="mailto:janiarithvika.simma@gmail.com"
+                                        href="mailto:simmajaniarithvika@gmail.com"
                                         className="text-sm font-bold text-foreground hover:text-purple-400 transition-colors"
                                     >
-                                        janiarithvika.simma@gmail.com
+                                        simmajaniarithvika@gmail.com
                                     </a>
                                 </div>
                             </div>
