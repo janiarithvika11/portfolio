@@ -37,11 +37,6 @@ export default function Footer() {
                 </div>
 
                 {/* Note */}
-                <p className="text-xs text-muted-foreground flex items-center gap-1.5 font-medium">
-                    Designed & Developed with
-                    <Heart size={12} className="text-red-500 animate-pulse fill-current" />
-                    and Coffee
-                </p>
 
                 {/* Copyright */}
                 <p className="text-xs text-muted-foreground/60 font-medium">
