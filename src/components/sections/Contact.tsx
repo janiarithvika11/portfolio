@@ -53,9 +53,9 @@ export default function Contact() {
         setIsSubmitting(true);
         setSubmitStatus("idle");
 
-        const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
-        const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
-        const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+        const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "service_gnfsvgm";
+        const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "template_3getrp8";
+        const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "_PBlDKL_5wrnc_qjK";
 
         try {
             if (serviceId && templateId && publicKey) {
