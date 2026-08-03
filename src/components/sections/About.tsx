@@ -90,12 +90,9 @@ export default function About() {
                         {/* Profile Image Frame */}
                         <div className="relative w-28 h-28 rounded-2xl overflow-hidden border border-purple-500/20 shadow-md">
                             <img
-                                src="https://drive.google.com/uc?export=view&id=1MFf-ROQSQ3PCfc7gnIDCE08B-eh1zARn"
+                                src="/profile.jpg"
                                 alt="Janiarithvika Simma"
                                 className="w-full h-full object-cover"
-                                onError={(e) => {
-                                    (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&auto=format&fit=crop";
-                                }}
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none" />
                         </div>
